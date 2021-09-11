@@ -1,8 +1,8 @@
 import React from "react"
 
-const Info = ({ hp, attack, defense, special_attack, special_defense, speed })=> {
+const Info = ({ cla, hp, attack, defense, special_attack, special_defense, speed })=> {
     return(
-        <div className="info">
+        <div className={cla}>
             <div className="hp">
                 <p className="hp-text">HP:</p>
                 <p className="hp-result">{hp}</p>

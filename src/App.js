@@ -6,20 +6,19 @@ import Image from "./components/Image"
 import Info from "./components/Info"
 import Restart from "./components/Restart"
 
+
 function App() {
   const [data, setData] = useState()
   const [click, setClick] = useState()
-
+  const [change, setChange] = useState("")
+  
   const getURL = ()=> {
     let random = Math.floor(Math.random() * 200) + 1
-
     const url = `https://pokeapi.co/api/v2/pokemon/${random}`
-
-    console.log(url)
     return url
-
+    
   }
-
+  
   const url = getURL()
   
   useEffect(()=> {
@@ -27,19 +26,32 @@ function App() {
       const res = await fetch(url)
       const response = await res.json()
       setData(response)
-      console.log(response)
     }
-
+    
     getData()
   }, [click])
-
+  
+  
+  //Change colors
+  const types = ["water", "normal", "rock", "fire", "ground", "dark", "electric", "psychic", "grass", "dragon", "ghost", "poison", "bug", "fairy", "fighting", "ice"]
+  
+  useEffect(()=> {
+    const changeColors = ()=> {
+      if(data !== undefined) {
+        let res = types.filter(t => t === data.types[0].type.name)
+        return setChange(`${res[0]}`)
+      }
+    }
+    changeColors()
+  }, [data])
+  
   const changeClick = ()=> {
     setClick(!click)
   }
 
   return (
     <div className="App">
-      <div className="card">
+      <div className={`card card-${change}`}>
         <Name 
         name={data === undefined ? "" : data.name}
         type={data === undefined ? "" : data.types[0].type.name}
@@ -49,6 +61,7 @@ function App() {
         alt={data === undefined ? "" : data.name}
         />
         <Info 
+        cla={`info info-${change}`}
         hp={data === undefined ? "" : data.stats[0].base_stat}
         attack={data === undefined ? "" : data.stats[1].base_stat}
         defense={data === undefined ? "" : data.stats[2].base_stat}
@@ -57,7 +70,8 @@ function App() {
         speed={data === undefined ? "" : data.stats[5].base_stat}
         />
       </div>
-      <Restart 
+      <Restart
+      cla={`restart info-${change}`} 
       Again={changeClick} 
       />
     </div>

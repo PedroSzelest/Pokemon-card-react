@@ -23,7 +23,6 @@ body {
 }
 
 .card {
-    background: linear-gradient(180deg, rgb(56, 163, 165), rgb(87, 204, 153));
     width: auto;
     height: auto;
     padding: 50px;
@@ -48,6 +47,10 @@ body {
     justify-content: center;
 }
 
+.image img {
+    max-height: 40vh;
+}
+
 .name {
     width: 100%;
     display: flex;
@@ -66,7 +69,6 @@ body {
 }
 
 .info {
-    background-color: rgb(128, 237, 153);
     align-self: flex-start;
     margin-top: 50px;
     padding: 20px;
@@ -89,3 +91,39 @@ body {
     color: white;
     justify-self: center;
 }
+
+/* Change Colors */
+
+.card-water { background: linear-gradient(180deg, rgb(56, 163, 165), rgb(87, 204, 153)); }
+.card-normal { background: linear-gradient(180deg, rgb(244, 209, 155), rgb(249, 243, 223)); }
+.card-rock { background: linear-gradient(180deg, rgb(157, 157, 157), rgb(248, 240, 223)); }
+.card-fire { background: linear-gradient(180deg, rgb(190, 0, 0), rgb(247, 234, 0)); }
+.card-dark { background: linear-gradient(180deg, rgb(0, 0, 0), rgb(89, 82, 96)); }
+.card-ground { background: linear-gradient(180deg, rgb(111, 76, 91), rgb(222, 186, 157)); }
+.card-electric { background: linear-gradient(180deg, rgb(250, 255, 0), rgb(255, 179, 68)); }
+.card-psychic { background: linear-gradient(180deg, rgb(250, 235, 224), rgb(185, 128, 240)); }
+.card-grass { background: linear-gradient(180deg, rgb(84, 227, 70), rgb(188, 255, 185)); }
+.card-dragon { background: linear-gradient(180deg, rgb(70, 70, 96), rgb(168, 231, 233)); }
+.card-poison { background: linear-gradient(180deg, rgb(84, 227, 70), rgb(63, 0, 113)); }
+.card-bug { background: linear-gradient(180deg, rgb(255, 179, 68), rgb(0, 161, 157)); }
+.card-ghost { background: linear-gradient(180deg, rgb(0, 0, 0), rgb(97, 0, 148)); }
+.card-fairy { background: linear-gradient(180deg, rgb(255, 222, 222), rgb(254, 251, 243)); }
+.card-fighting { background: linear-gradient(180deg, rgb(164, 93, 93), rgb(255, 192, 105)); }
+.card-ice { background: linear-gradient(180deg, rgb(0, 35, 102), rgb(61, 178, 255)); }
+
+.info-water { background-color: rgb(56, 163, 165); }
+.info-normal { background-color: rgb(244, 209, 155); }
+.info-rock { background-color: rgb(157, 157, 157); }
+.info-fire { background-color: rgb(190, 0, 0); }
+.info-dark { background-color: rgb(0, 0, 0); color: white; }
+.info-ground { background-color: rgb(111, 76, 91); }
+.info-electric { background-color: rgb(250, 255, 0); }
+.info-psychic { background-color: rgb(250, 235, 224); }
+.info-grass { background-color: rgb(84, 227, 70); }
+.info-dragon { background-color: rgb(70, 70, 96); }
+.info-poison { background-color: rgb(84, 227, 70); }
+.info-bug { background-color: rgb(255, 179, 68); }
+.info-ghost { background-color: rgb(0, 0, 0); color: white; }
+.info-fairy { background-color: rgb(255, 222, 222); }
+.info-fighting { background-color: rgb(164, 93, 93); }
+.info-ice { background-color: rgb(0, 35, 102); color: white;}

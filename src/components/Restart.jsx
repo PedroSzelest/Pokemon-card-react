@@ -1,9 +1,9 @@
 import React from "react"
 
-const Restart = ({ Again })=> {
+const Restart = ({ cla, Again })=> {
     return(
         <>
-            <button className="restart" onClick={Again}>RESTART</button>
+            <button className={cla} onClick={Again}>RESTART</button>
         </>
     )
 }
