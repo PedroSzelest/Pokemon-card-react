@@ -1,38 +1,91 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+    background: linear-gradient(180deg, rgb(56, 163, 165), rgb(87, 204, 153));
+    width: auto;
+    height: auto;
+    padding: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.name > p {
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.info {
+    background-color: rgb(128, 237, 153);
+    align-self: flex-start;
+    margin-top: 50px;
+    padding: 20px;
+    width: 25vw;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.info > div {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.restart {
+    margin-top: 30px;
+    background-color: rgb(56, 163, 165);
+    padding: 10px;
+    border: none;
+    color: white;
+    justify-self: center;
 }
